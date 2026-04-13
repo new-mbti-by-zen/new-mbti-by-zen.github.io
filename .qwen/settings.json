@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(rm *)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(mkdir *)"
     ]
   },
   "$version": 3

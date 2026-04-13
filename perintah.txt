@@ -1,2 +1,3 @@
-pada hasil tes, coba detail menerangkan setiap domensi seperti dalam karir, pebdidikan, romansa, dll
-di pdf yang dudownload, juga harus menampilkan semua elemen yabg di halamab hasik
+aku ingin membuat landing page untuk aplikasi ini. jadi, tuliskan dulu konsep landing page yang mau kamu buat di landing-page/konsep.txt. aku mau cek dulu
+sejarang buatkan di fe landing-page/index.html sesyai kobsep di landing-page/konsep.txt. css inlibe di html
+kan yang konsep.txt sudah aku edit ya. nah, index.html landing page itu harus sesuai dengan konsep.txt yang sjfah aku edit. contihnya aja, s3mua kata graris sudah aku hapus

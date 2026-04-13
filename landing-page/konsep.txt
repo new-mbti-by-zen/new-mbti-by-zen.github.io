@@ -1,0 +1,234 @@
+# KONSEP LANDING PAGE - MBTI Test
+
+## 🎯 TUJUAN
+Landing page untuk mempromosikan Tes MBTI online dengan fokus pada:
+- Konversi pengunjung menjadi peserta tes
+- Penjelasan nilai/manfaat tes
+- Desain profesional dan menarik
+- Mobile-first responsive
+
+---
+
+## 📐 STRUKTUR HALAMAN
+
+### 1. HERO SECTION (Above the Fold)
+**Layout:** Full-screen dengan background gradient + pattern
+**Konten:**
+- Headline utama: "Kenali Diri Anda dalam 10 Menit"
+- Subheadline: "Temukan tipe kepribadian Anda dengan tes MBTI gratis. 60 pertanyaan, hasil langsung, laporan lengkap."
+- Visual: Illustrasi otak/psikologi atau mockup hasil tes
+
+---
+
+### 2. SOCIAL PROOF / STATS
+**Layout:** 4 kolom dengan angka besar
+**Konten:**
+- "16" Tipe Kepribadian
+- "10 Menit" Waktu Tes
+
+---
+
+### 3. MASALAH / PAIN POINTS
+**Layout:** 2 kolom dengan ilustrasi
+**Konten:**
+- "Pernahkah Anda Merasa..."
+  - ❌ Bingung kenapa sulit bergaul di keramaian?
+  - ❌ Sulit mengambil keputusan penting?
+  - ❌ Tidak paham kenapa sering clash dengan orang lain?
+  - ❌ Ingin tahu karir yang cocok?
+- "Anda tidak sendiri. MBTI membantu Anda memahami diri sendiri."
+
+---
+
+### 4. SOLUSI / BENEFITS
+**Layout:** Grid 3x2 dengan ikon
+**Konten:**
+- **Kenapa Harus Tes MBTI Kami?**
+  1. 📝 **60 Pertanyaan Mudah** - Tidak ada jawaban benar/salah
+  2. ⚡ **Hasil Instan** - Langsung tahu tipe Anda
+  3. 📊 **Laporan Lengkap** - Skor 4 dimensi dengan grafik
+  4. 💼 **Detail 7 Aspek** - Karir, Pendidikan, Romansa, dll
+  5. 📄 **Download PDF** - Bisa simpan hasil tes
+  6. 🎯 **16 Tipe Lengkap** - Deskripsi mendalam tiap tipe
+
+---
+
+### 5. CARA KERJA / HOW IT WORKS
+**Layout:** 3 step horizontal dengan angka besar
+**Konten:**
+- **3 Langkah Mudah:**
+  1. **Jawab 60 Pertanyaan** - Pilih sesuai perasaan Anda
+  2. **Lihat Hasil Langsung** - Tipe + skor dimensi Anda
+  3. **Download PDF** - Simpan dan bagikan hasil Anda
+
+---
+
+### 6. CONTOH HASIL / SAMPLE RESULTS
+**Layout:** Mockup hasil tes (screenshot-like)
+**Konten:**
+- Tampilkan contoh hasil tes (bisa mockup INTJ, ENFP, dll)
+- Highlight:
+  - 4 huruf tipe
+  - Grafik dimensi
+  - Detail Karir, Pendidikan, Romansa
+- CTA kecil: "Lihat Contoh Hasil →"
+
+---
+
+### 7. 4 DIMENSI MBTI (EDUKASI)
+**Layout:** 4 card horizontal/accordion
+**Konten:**
+- **4 Dimensi yang Diukur:**
+  1. **Energi (E vs I)** - Dari mana Anda dapat energi
+  2. **Informasi (S vs N)** - Cara Anda memproses dunia
+  3. **Keputusan (T vs F)** - Bagaimana Anda memutuskan
+  4. **Gaya Hidup (J vs P)** - Cara Anda menjalani hidup
+- Click to expand untuk penjelasan tiap dimensi
+
+---
+
+
+
+---
+
+### 9. FAQ SECTION
+**Layout:** Accordion
+**Konten:**
+- **Pertanyaan Umum:**
+  - Apa itu MBTI?
+  - Berapa lama tes?
+  - Apakah hasilnya akurat?
+  - Bisa ulangi tes?
+  - Bagaimana cara kerja skor?
+
+---
+
+
+
+---
+
+### 11. FOOTER
+**Layout:** 3 kolom
+**Konten:**
+- **Kiri:** About + disclaimer
+  - "Tes MBTI ini bersifat edukatif dan tidak menggantikan konsultasi profesional."
+- **Tengah:** Links
+  - Tentang MBTI
+  - 16 Tipe Kepribadian
+  - Kontak
+- **Kanan:** Social + Legal
+  - Privacy Policy
+  - Terms of Use
+  - © 2026 MBTI Test
+
+---
+
+## 🎨 DESIGN SYSTEM
+
+### Colors
+- **Primary:** #4a6fa5 (biru calming)
+- **Secondary:** #6b8cce (biru lighter)
+- **Accent:** #ff6b6b (merah/muda untuk CTA)
+- **Neutral:** #333 (text), #f5f7fa (bg)
+
+### Typography
+- **Headings:** Segoe UI / System fonts (bold)
+- **Body:** Segoe UI / System fonts (regular)
+- **CTA:** Segoe UI (semibold, larger)
+
+### Spacing
+- **Section padding:** 80px vertical (desktop), 40px (mobile)
+- **Container max-width:** 1200px
+- **Card padding:** 2rem
+
+### Animations
+- **Fade in on scroll** untuk sections
+- **Hover effects** pada cards dan buttons
+- **Smooth scroll** untuk anchor links
+
+---
+
+## 📱 RESPONSIVE BREAKPOINTS
+- **Desktop:** > 1024px (full layout)
+- **Tablet:** 768px - 1024px (2-column grids)
+- **Mobile:** < 768px (single column)
+- **Small Mobile:** < 480px (compact spacing)
+
+---
+
+## 🛠️ TECH STACK
+- **HTML5** - Semantic markup
+- **CSS3** - Custom properties, grid, flexbox, animations
+- **Vanilla JS** - Smooth scroll, FAQ accordion, animations
+- **No frameworks** - Keep it lightweight
+
+---
+
+## 📂 STRUKTUR FILE
+```
+landing-page/
+├── konsep.txt (file ini)
+├── index.html
+```
+
+---
+
+## 🎯 KONVERSI STRATEGY
+
+### Trust Builders
+- Benefits yang jelas
+- Sample results
+- FAQ lengkap
+
+### Friction Removers
+- "10 menit" untuk set ekspektasi
+- "60 pertanyaan" transparan
+
+---
+
+## 🔮 FASE PENGEMBANGAN
+
+### Phase 1 (MVP)
+- Hero, Stats, Benefits, How it Works, CTA, Footer
+- Basic responsive design
+
+### Phase 2
+- Problem/Solution section
+- Sample results mockup
+- FAQ accordion
+- Smooth scroll animations
+
+### Phase 3 (Optional)
+- Blog/Content section
+- Email capture untuk updates
+- Analytics integration
+
+---
+
+## ✨ KEUNGGULAN DARI KOMPETITOR
+1. **100% Client-side** - Tidak perlu server, privacy terjaga
+2. **Hasil instan** - Tidak perlu tunggu email
+3. **Laporan lengkap** - 7 aspek kehidupan, bukan cuma 4 huruf
+4. **Download PDF** - Bisa simpan dan share
+5. **Bahasa Indonesia** - Lokal dan mudah dimengerti
+
+---
+
+## 📝 COPYWRITING PRINCIPLES
+- **Bahasa santai** tapi profesional
+- **Gunakan "Anda"** untuk personalisasi
+- **Fokus pada benefit**, bukan feature
+- **Angka spesifik** (10 menit, 60 soal, 16 tipe)
+- **Social proof** untuk trust
+- **Urgency halus** (mulai sekarang, jangan tunda)
+
+---
+
+## 🎭 TONE & VOICE
+- **Tone:** Hangat, informatif, encouraging
+- **Voice:** Seperti teman yang ngerti
+- **Tidak:** Terlalu akademis, intimidating, atau sales-y
+
+---
+
+Disetujui untuk dikembangkan? Beri tahu jika ada yang perlu diubah! 🚀
