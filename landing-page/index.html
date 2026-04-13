@@ -8,683 +8,42 @@
       content="Tes MBTI online gratis. 60 pertanyaan, hasil instan, laporan lengkap. Kenali diri Anda dalam 10 menit."
     />
     <title>Tes MBTI Online Gratis - Kenali Diri Anda dalam 10 Menit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4a6fa5",
+              secondary: "#6b8cce",
+              accent: "#ff6b6b",
+              "accent-hover": "#e55a5a",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <div>
-      <style>
-        /* ===== CSS RESET & BASE ===== */
-        *,
-        *::before,
-        *::after {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        :root {
-          --primary: #4a6fa5;
-          --secondary: #6b8cce;
-          --accent: #ff6b6b;
-          --accent-hover: #e55a5a;
-          --text: #333;
-          --text-light: #666;
-          --bg: #f5f7fa;
-          --white: #ffffff;
-          --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
-          --radius: 8px;
-          --radius-lg: 12px;
-        }
-
-        html {
-          scroll-behavior: smooth;
-        }
-
-        body {
-          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-          color: var(--text);
-          line-height: 1.6;
-          background-color: var(--white);
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
-        img {
-          max-width: 100%;
-          height: auto;
-          display: block;
-        }
-
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
-
-        /* ===== LAYOUT UTILITIES ===== */
-        .container {
-          max-width: 600px;
-          margin: 0 auto;
-          padding: 0 1rem;
-        }
-
-        section {
-          padding: 40px 0;
-        }
-
-        .section-title {
-          font-size: 1.8rem;
-          font-weight: 700;
-          text-align: center;
-          margin-bottom: 0.75rem;
-          color: var(--primary);
-          line-height: 1.3;
-        }
-
-        .section-subtitle {
-          font-size: 1rem;
-          text-align: center;
-          color: var(--text-light);
-          margin-bottom: 2rem;
-          line-height: 1.5;
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn {
-          display: inline-block;
-          padding: 1rem 2rem;
-          border-radius: var(--radius);
-          font-weight: 600;
-          font-size: 1rem;
-          text-align: center;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          border: none;
-          width: 100%;
-        }
-
-        .btn-primary {
-          background-color: var(--accent);
-          color: var(--white);
-          box-shadow: var(--shadow);
-        }
-
-        .btn-primary:hover {
-          background-color: var(--accent-hover);
-          transform: translateY(-2px);
-          box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-          background-color: var(--white);
-          color: var(--primary);
-          border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-          background-color: var(--primary);
-          color: var(--white);
-        }
-
-        /* ===== NAVIGATION ===== */
-        nav {
-          background-color: var(--white);
-          box-shadow: var(--shadow);
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          padding: 0.75rem 0;
-        }
-
-        .nav-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 1rem;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
-        .nav-logo {
-          font-size: 1.25rem;
-          font-weight: 700;
-          color: var(--primary);
-        }
-
-        .nav-cta {
-          padding: 0.5rem 1rem;
-          font-size: 0.85rem;
-          width: auto;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-          background: linear-gradient(
-            135deg,
-            var(--primary) 0%,
-            var(--secondary) 100%
-          );
-          color: var(--white);
-          padding: 60px 0;
-          text-align: center;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .hero::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-image:
-            radial-gradient(
-              circle at 20% 50%,
-              rgba(255, 255, 255, 0.1) 0%,
-              transparent 50%
-            ),
-            radial-gradient(
-              circle at 80% 80%,
-              rgba(255, 255, 255, 0.1) 0%,
-              transparent 50%
-            );
-          pointer-events: none;
-        }
-
-        .hero-content {
-          position: relative;
-          z-index: 1;
-          padding: 0 1rem;
-        }
-
-        .hero h1 {
-          font-size: 2rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-          line-height: 1.2;
-        }
-
-        .hero p {
-          font-size: 1rem;
-          margin-bottom: 1.5rem;
-          opacity: 0.95;
-          line-height: 1.5;
-        }
-
-        .hero-buttons {
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-        }
-
-        .hero .btn-primary {
-          background-color: var(--accent);
-          font-size: 1.1rem;
-          padding: 1.1rem 2rem;
-        }
-
-        /* ===== STATS SECTION ===== */
-        .stats {
-          background-color: var(--bg);
-          padding: 30px 0;
-        }
-
-        .stats-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
-        }
-
-        .stat-item {
-          text-align: center;
-          padding: 1.5rem 1rem;
-          background-color: var(--white);
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow);
-        }
-
-        .stat-number {
-          font-size: 2.5rem;
-          font-weight: 700;
-          color: var(--primary);
-          margin-bottom: 0.25rem;
-          line-height: 1;
-        }
-
-        .stat-label {
-          font-size: 0.85rem;
-          color: var(--text-light);
-        }
-
-        /* ===== PAIN POINTS SECTION ===== */
-        .pain-points {
-          background-color: var(--white);
-        }
-
-        .pain-list {
-          list-style: none;
-          margin-bottom: 2rem;
-        }
-
-        .pain-list li {
-          padding: 1rem;
-          margin-bottom: 0.75rem;
-          background-color: var(--bg);
-          border-radius: var(--radius);
-          font-size: 0.95rem;
-          display: flex;
-          align-items: flex-start;
-          gap: 0.75rem;
-          line-height: 1.4;
-        }
-
-        .pain-list li::before {
-          content: "❌";
-          font-size: 1.1rem;
-          flex-shrink: 0;
-        }
-
-        .pain-solution {
-          background-color: var(--bg);
-          padding: 1.5rem;
-          border-radius: var(--radius-lg);
-          text-align: center;
-        }
-
-        .pain-solution h3 {
-          font-size: 1.3rem;
-          color: var(--primary);
-          margin-bottom: 0.75rem;
-        }
-
-        .pain-solution p {
-          font-size: 0.95rem;
-          color: var(--text-light);
-          line-height: 1.5;
-        }
-
-        /* ===== BENEFITS SECTION ===== */
-        .benefits {
-          background-color: var(--bg);
-        }
-
-        .benefits-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 1rem;
-        }
-
-        .benefit-card {
-          background-color: var(--white);
-          padding: 1.5rem;
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow);
-          transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
-        }
-
-        .benefit-card:hover {
-          transform: translateY(-3px);
-          box-shadow: var(--shadow-lg);
-        }
-
-        .benefit-icon {
-          font-size: 2rem;
-          margin-bottom: 0.75rem;
-        }
-
-        .benefit-card h3 {
-          font-size: 1.1rem;
-          color: var(--primary);
-          margin-bottom: 0.5rem;
-        }
-
-        .benefit-card p {
-          color: var(--text-light);
-          font-size: 0.9rem;
-          line-height: 1.5;
-        }
-
-        /* ===== HOW IT WORKS SECTION ===== */
-        .how-it-works {
-          background-color: var(--white);
-        }
-
-        .steps {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 1.5rem;
-        }
-
-        .step {
-          text-align: center;
-          padding: 1.5rem;
-          background-color: var(--bg);
-          border-radius: var(--radius-lg);
-        }
-
-        .step-number {
-          width: 50px;
-          height: 50px;
-          background-color: var(--primary);
-          color: var(--white);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.5rem;
-          font-weight: 700;
-          margin: 0 auto 1rem;
-        }
-
-        .step h3 {
-          font-size: 1.1rem;
-          color: var(--primary);
-          margin-bottom: 0.5rem;
-        }
-
-        .step p {
-          color: var(--text-light);
-          font-size: 0.9rem;
-          line-height: 1.5;
-        }
-
-        /* ===== SAMPLE RESULTS SECTION ===== */
-        .sample-results {
-          background-color: var(--bg);
-        }
-
-        .results-mockup {
-          background-color: var(--white);
-          border-radius: var(--radius-lg);
-          padding: 1.5rem;
-          box-shadow: var(--shadow);
-          margin-bottom: 1.5rem;
-        }
-
-        .mockup-header {
-          text-align: center;
-          margin-bottom: 1.5rem;
-          padding-bottom: 1.5rem;
-          border-bottom: 2px solid var(--bg);
-        }
-
-        .mockup-type {
-          font-size: 2rem;
-          font-weight: 700;
-          color: var(--primary);
-          background-color: var(--bg);
-          display: inline-block;
-          padding: 0.75rem 1.5rem;
-          border-radius: var(--radius);
-          margin-bottom: 0.75rem;
-        }
-
-        .mockup-header p {
-          font-size: 0.9rem;
-          color: var(--text-light);
-        }
-
-        .mockup-dimensions {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 1rem;
-          margin-bottom: 1.5rem;
-        }
-
-        .dimension-bar {
-          background-color: var(--bg);
-          padding: 1rem;
-          border-radius: var(--radius);
-        }
-
-        .dimension-label {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 0.5rem;
-          font-weight: 600;
-          font-size: 0.9rem;
-        }
-
-        .dimension-visual {
-          height: 8px;
-          background-color: #e0e0e0;
-          border-radius: 4px;
-          overflow: hidden;
-        }
-
-        .dimension-fill {
-          height: 100%;
-          background-color: var(--primary);
-          border-radius: 4px;
-        }
-
-        .mockup-details {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 0.75rem;
-        }
-
-        .detail-item {
-          background-color: var(--bg);
-          padding: 1rem;
-          border-radius: var(--radius);
-          text-align: center;
-        }
-
-        .detail-item h4 {
-          color: var(--primary);
-          margin-bottom: 0.25rem;
-          font-size: 1rem;
-        }
-
-        .detail-item p {
-          font-size: 0.85rem;
-          color: var(--text-light);
-        }
-
-        .cta-center {
-          text-align: center;
-        }
-
-        /* ===== 4 DIMENSIONS SECTION ===== */
-        .dimensions {
-          background-color: var(--white);
-        }
-
-        .dimensions-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 1rem;
-        }
-
-        .dimension-card {
-          background-color: var(--bg);
-          padding: 1.5rem;
-          border-radius: var(--radius-lg);
-          border-left: 4px solid var(--primary);
-        }
-
-        .dimension-card h3 {
-          font-size: 1.2rem;
-          color: var(--primary);
-          margin-bottom: 0.75rem;
-        }
-
-        .dimension-poles {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 0.75rem;
-          font-weight: 600;
-          gap: 0.5rem;
-        }
-
-        .pole {
-          background-color: var(--white);
-          padding: 0.5rem;
-          border-radius: var(--radius);
-          text-align: center;
-          flex: 1;
-          font-size: 0.85rem;
-        }
-
-        .dimension-card p {
-          color: var(--text-light);
-          font-size: 0.9rem;
-          line-height: 1.5;
-        }
-
-        /* ===== FAQ SECTION ===== */
-        .faq {
-          background-color: var(--bg);
-        }
-
-        .faq-list {
-          display: flex;
-          flex-direction: column;
-          gap: 0.75rem;
-        }
-
-        .faq-item {
-          background-color: var(--white);
-          border-radius: var(--radius);
-          box-shadow: var(--shadow);
-          overflow: hidden;
-        }
-
-        .faq-question {
-          padding: 1.25rem;
-          font-weight: 600;
-          font-size: 1rem;
-          color: var(--primary);
-          display: block;
-          line-height: 1.4;
-        }
-
-        .faq-answer {
-          padding: 0 1.25rem 1.25rem;
-          color: var(--text-light);
-          border-top: 1px solid var(--bg);
-        }
-
-        .faq-answer p {
-          padding-top: 0.75rem;
-          font-size: 0.9rem;
-          line-height: 1.5;
-        }
-
-        /* ===== CTA SECTION ===== */
-        .cta-section {
-          background: linear-gradient(
-            135deg,
-            var(--primary) 0%,
-            var(--secondary) 100%
-          );
-          color: var(--white);
-          text-align: center;
-          padding: 60px 0;
-        }
-
-        .cta-section h2 {
-          font-size: 2rem;
-          margin-bottom: 0.75rem;
-          line-height: 1.2;
-        }
-
-        .cta-section p {
-          font-size: 1rem;
-          margin-bottom: 1.5rem;
-          opacity: 0.95;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-          background-color: var(--text);
-          color: var(--white);
-          padding: 40px 0 20px;
-        }
-
-        .footer-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 2rem;
-          margin-bottom: 2rem;
-        }
-
-        .footer-column h3 {
-          font-size: 1.1rem;
-          margin-bottom: 0.75rem;
-          color: var(--white);
-        }
-
-        .footer-column p {
-          color: #b0b0b0;
-          margin-bottom: 0.75rem;
-          font-size: 0.9rem;
-          line-height: 1.5;
-        }
-
-        .footer-links {
-          list-style: none;
-        }
-
-        .footer-links li {
-          margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-          color: #b0b0b0;
-          transition: color 0.3s ease;
-          font-size: 0.9rem;
-        }
-
-        .footer-links a:hover {
-          color: var(--white);
-        }
-
-        .footer-bottom {
-          text-align: center;
-          padding-top: 1.5rem;
-          border-top: 1px solid #444;
-          color: #b0b0b0;
-          font-size: 0.85rem;
-        }
-
-        /* ===== SPACING ADJUSTMENTS ===== */
-        section {
-          padding: 40px 0;
-        }
-
-        .hero {
-          padding: 50px 0;
-        }
-
-        .stats {
-          padding: 30px 0;
-        }
-
-        .cta-section {
-          padding: 50px 0;
-        }
-
-        section + section {
-          margin-top: 0;
-        }
-      </style>
-    </div>
+  <body class="max-w-[600px] mx-auto bg-white text-gray-800 leading-relaxed">
     <!-- NAVIGATION -->
-    <nav>
-      <div class="nav-container">
-        <a href="#" class="nav-logo">🧠 MBTI Test</a>
+    <nav class="sticky top-0 z-50 bg-white shadow-md py-3">
+      <div class="flex justify-between items-center px-4">
+        <a href="#" class="text-xl font-bold text-primary">🧠 MBTI Test</a>
       </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Kenali Diri Anda dalam 10 Menit</h1>
-        <p>
+    <section
+      class="bg-gradient-to-br from-primary to-secondary text-white py-16 relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.1)_0%,transparent_50%)] pointer-events-none"
+      ></div>
+      <div class="relative z-10 px-4 text-center">
+        <h1 class="text-3xl font-bold mb-4 leading-tight">
+          Kenali Diri Anda dalam 10 Menit
+        </h1>
+        <p class="text-base mb-6 opacity-95">
           Temukan tipe kepribadian Anda dengan tes MBTI gratis. 60 pertanyaan,
           hasil langsung, laporan lengkap.
         </p>
@@ -692,42 +51,68 @@
     </section>
 
     <!-- STATS SECTION -->
-    <section class="stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number">16</div>
-            <div class="stat-label">Tipe Kepribadian</div>
+    <section class="bg-gray-50 py-8">
+      <div class="px-4">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <div class="text-4xl font-bold text-primary mb-1">16</div>
+            <div class="text-sm text-gray-600">Tipe Kepribadian</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number">10</div>
-            <div class="stat-label">Menit Waktu Tes</div>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <div class="text-4xl font-bold text-primary mb-1">10</div>
+            <div class="text-sm text-gray-600">Menit Waktu Tes</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number">60</div>
-            <div class="stat-label">Pertanyaan Mudah</div>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <div class="text-4xl font-bold text-primary mb-1">60</div>
+            <div class="text-sm text-gray-600">Pertanyaan Mudah</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number">7</div>
-            <div class="stat-label">Aspek Kehidupan</div>
+          <div class="bg-white p-6 rounded-xl shadow-md text-center">
+            <div class="text-4xl font-bold text-primary mb-1">7</div>
+            <div class="text-sm text-gray-600">Aspek Kehidupan</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- PAIN POINTS SECTION -->
-    <section class="pain-points">
-      <div class="container">
-        <h2 class="section-title">Pernahkah Anda Merasa...</h2>
-        <ul class="pain-list">
-          <li>Bingung kenapa sulit bergaul di keramaian?</li>
-          <li>Sulit mengambil keputusan penting?</li>
-          <li>Tidak paham kenapa sering clash dengan orang lain?</li>
-          <li>Ingin tahu karir yang cocok?</li>
+    <section class="bg-white py-10">
+      <div class="px-4">
+        <h2
+          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+        >
+          Pernahkah Anda Merasa...
+        </h2>
+        <ul class="list-none mb-8 space-y-3">
+          <li
+            class="bg-gray-50 p-4 rounded-lg text-base flex items-start gap-3"
+          >
+            <span class="text-xl flex-shrink-0">❌</span>
+            <span>Bingung kenapa sulit bergaul di keramaian?</span>
+          </li>
+          <li
+            class="bg-gray-50 p-4 rounded-lg text-base flex items-start gap-3"
+          >
+            <span class="text-xl flex-shrink-0">❌</span>
+            <span>Sulit mengambil keputusan penting?</span>
+          </li>
+          <li
+            class="bg-gray-50 p-4 rounded-lg text-base flex items-start gap-3"
+          >
+            <span class="text-xl flex-shrink-0">❌</span>
+            <span>Tidak paham kenapa sering clash dengan orang lain?</span>
+          </li>
+          <li
+            class="bg-gray-50 p-4 rounded-lg text-base flex items-start gap-3"
+          >
+            <span class="text-xl flex-shrink-0">❌</span>
+            <span>Ingin tahu karir yang cocok?</span>
+          </li>
         </ul>
-        <div class="pain-solution">
-          <h3>Anda Tidak Sendiri</h3>
-          <p>
+        <div class="bg-gray-50 p-6 rounded-xl text-center">
+          <h3 class="text-xl font-semibold text-primary mb-3">
+            Anda Tidak Sendiri
+          </h3>
+          <p class="text-base text-gray-600">
             MBTI membantu Anda memahami diri sendiri, mengapa Anda bereaksi
             terhadap situasi tertentu, dan bagaimana Anda bisa berinteraksi
             lebih baik dengan orang lain.
@@ -737,58 +122,86 @@
     </section>
 
     <!-- BENEFITS SECTION -->
-    <section class="benefits" id="benefits">
-      <div class="container">
-        <h2 class="section-title">Kenapa Harus Tes MBTI Kami?</h2>
-        <p class="section-subtitle">
+    <section class="bg-gray-50 py-10" id="benefits">
+      <div class="px-4">
+        <h2
+          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+        >
+          Kenapa Harus Tes MBTI Kami?
+        </h2>
+        <p class="text-center text-gray-600 mb-8">
           Tes yang dirancang untuk memberikan pemahaman mendalam tentang diri
           Anda dengan cara yang mudah dan menyenangkan.
         </p>
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <div class="benefit-icon">📝</div>
-            <h3>60 Pertanyaan Mudah</h3>
-            <p>
+        <div class="space-y-4">
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-3xl mb-3">📝</div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              60 Pertanyaan Mudah
+            </h3>
+            <p class="text-gray-600 text-sm">
               Tidak ada jawaban benar atau salah. Jawab sesuai perasaan Anda dan
               biarkan hasil berbicara.
             </p>
           </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">⚡</div>
-            <h3>Hasil Instan</h3>
-            <p>
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-3xl mb-3">⚡</div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              Hasil Instan
+            </h3>
+            <p class="text-gray-600 text-sm">
               Langsung tahu tipe kepribadian Anda begitu selesai tes. Tidak
               perlu menunggu email atau pendaftaran.
             </p>
           </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">📊</div>
-            <h3>Laporan Lengkap</h3>
-            <p>
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-3xl mb-3">📊</div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              Laporan Lengkap
+            </h3>
+            <p class="text-gray-600 text-sm">
               Skor 4 dimensi dengan grafik yang mudah dipahami. Bukan cuma 4
               huruf tanpa konteks.
             </p>
           </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">💼</div>
-            <h3>Detail 7 Aspek</h3>
-            <p>
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-3xl mb-3">💼</div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              Detail 7 Aspek
+            </h3>
+            <p class="text-gray-600 text-sm">
               Analisis mendalam untuk Karir, Pendidikan, Romansa, Komunikasi,
               dan aspek kehidupan lainnya.
             </p>
           </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">📄</div>
-            <h3>Download PDF</h3>
-            <p>
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-3xl mb-3">📄</div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              Download PDF
+            </h3>
+            <p class="text-gray-600 text-sm">
               Simpan hasil tes Anda dalam format PDF. Bisa dicetak atau
               dibagikan ke orang lain.
             </p>
           </div>
-          <div class="benefit-card">
-            <div class="benefit-icon">🎯</div>
-            <h3>16 Tipe Lengkap</h3>
-            <p>
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="text-3xl mb-3">🎯</div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              16 Tipe Lengkap
+            </h3>
+            <p class="text-gray-600 text-sm">
               Deskripsi mendalam untuk setiap tipe kepribadian. Pahami diri
               sendiri dan orang lain lebih baik.
             </p>
@@ -798,33 +211,55 @@
     </section>
 
     <!-- HOW IT WORKS SECTION -->
-    <section class="how-it-works" id="how-it-works">
-      <div class="container">
-        <h2 class="section-title">3 Langkah Mudah</h2>
-        <p class="section-subtitle">
+    <section class="bg-white py-10" id="how-it-works">
+      <div class="px-4">
+        <h2
+          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+        >
+          3 Langkah Mudah
+        </h2>
+        <p class="text-center text-gray-600 mb-8">
           Proses yang simpel untuk mengenal diri Anda lebih dalam.
         </p>
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Jawab 60 Pertanyaan</h3>
-            <p>
+        <div class="space-y-6">
+          <div class="text-center p-6 bg-gray-50 rounded-xl">
+            <div
+              class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+            >
+              1
+            </div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              Jawab 60 Pertanyaan
+            </h3>
+            <p class="text-gray-600 text-sm">
               Pilih jawaban yang paling sesuai dengan perasaan Anda. Tidak ada
               jawaban benar atau salah.
             </p>
           </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Lihat Hasil Langsung</h3>
-            <p>
+          <div class="text-center p-6 bg-gray-50 rounded-xl">
+            <div
+              class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+            >
+              2
+            </div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              Lihat Hasil Langsung
+            </h3>
+            <p class="text-gray-600 text-sm">
               Setelah selesai, Anda langsung bisa melihat tipe kepribadian dan
               skor dimensi Anda.
             </p>
           </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Download PDF</h3>
-            <p>
+          <div class="text-center p-6 bg-gray-50 rounded-xl">
+            <div
+              class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+            >
+              3
+            </div>
+            <h3 class="text-lg font-semibold text-primary mb-2">
+              Download PDF
+            </h3>
+            <p class="text-gray-600 text-sm">
               Simpan hasil tes Anda dalam format PDF untuk referensi atau
               dibagikan ke orang lain.
             </p>
@@ -834,69 +269,89 @@
     </section>
 
     <!-- SAMPLE RESULTS SECTION -->
-    <section class="sample-results" id="sample-results">
-      <div class="container">
-        <h2 class="section-title">Contoh Hasil Tes</h2>
-        <p class="section-subtitle">
+    <section class="bg-gray-50 py-10" id="sample-results">
+      <div class="px-4">
+        <h2
+          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+        >
+          Contoh Hasil Tes
+        </h2>
+        <p class="text-center text-gray-600 mb-8">
           Seperti ini laporan yang akan Anda dapatkan setelah menyelesaikan tes.
         </p>
-        <div class="results-mockup">
-          <div class="mockup-header">
-            <div class="mockup-type">INTJ - The Architect</div>
-            <p>
+        <div class="bg-white rounded-xl p-6 shadow-md mb-6">
+          <div class="text-center mb-6 pb-6 border-b-2 border-gray-50">
+            <div
+              class="text-3xl font-bold text-primary bg-gray-50 inline-block px-6 py-3 rounded-lg mb-3"
+            >
+              INTJ - The Architect
+            </div>
+            <p class="text-sm text-gray-600">
               Pemikir strategis dengan visi jangka panjang dan standar tinggi.
             </p>
           </div>
-          <div class="mockup-dimensions">
-            <div class="dimension-bar">
-              <div class="dimension-label">
+          <div class="space-y-4 mb-6">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="flex justify-between mb-2 font-semibold text-sm">
                 <span>Energi</span>
                 <span>I - 72%</span>
               </div>
-              <div class="dimension-visual">
-                <div class="dimension-fill" style="width: 72%"></div>
+              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-primary rounded-full"
+                  style="width: 72%"
+                ></div>
               </div>
             </div>
-            <div class="dimension-bar">
-              <div class="dimension-label">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="flex justify-between mb-2 font-semibold text-sm">
                 <span>Informasi</span>
                 <span>N - 68%</span>
               </div>
-              <div class="dimension-visual">
-                <div class="dimension-fill" style="width: 68%"></div>
+              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-primary rounded-full"
+                  style="width: 68%"
+                ></div>
               </div>
             </div>
-            <div class="dimension-bar">
-              <div class="dimension-label">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="flex justify-between mb-2 font-semibold text-sm">
                 <span>Keputusan</span>
                 <span>T - 81%</span>
               </div>
-              <div class="dimension-visual">
-                <div class="dimension-fill" style="width: 81%"></div>
+              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-primary rounded-full"
+                  style="width: 81%"
+                ></div>
               </div>
             </div>
-            <div class="dimension-bar">
-              <div class="dimension-label">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="flex justify-between mb-2 font-semibold text-sm">
                 <span>Gaya Hidup</span>
                 <span>J - 65%</span>
               </div>
-              <div class="dimension-visual">
-                <div class="dimension-fill" style="width: 65%"></div>
+              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-primary rounded-full"
+                  style="width: 65%"
+                ></div>
               </div>
             </div>
           </div>
-          <div class="mockup-details">
-            <div class="detail-item">
-              <h4>💼 Karir</h4>
-              <p>Analisis kecocokan karir</p>
+          <div class="grid grid-cols-1 gap-3">
+            <div class="bg-gray-50 p-4 rounded-lg text-center">
+              <h4 class="text-primary font-semibold mb-1">💼 Karir</h4>
+              <p class="text-xs text-gray-600">Analisis kecocokan karir</p>
             </div>
-            <div class="detail-item">
-              <h4>📚 Pendidikan</h4>
-              <p>Gaya belajar ideal</p>
+            <div class="bg-gray-50 p-4 rounded-lg text-center">
+              <h4 class="text-primary font-semibold mb-1">📚 Pendidikan</h4>
+              <p class="text-xs text-gray-600">Gaya belajar ideal</p>
             </div>
-            <div class="detail-item">
-              <h4>❤️ Romansa</h4>
-              <p>Kompatibilitas hubungan</p>
+            <div class="bg-gray-50 p-4 rounded-lg text-center">
+              <h4 class="text-primary font-semibold mb-1">❤️ Romansa</h4>
+              <p class="text-xs text-gray-600">Kompatibilitas hubungan</p>
             </div>
           </div>
         </div>
@@ -904,57 +359,85 @@
     </section>
 
     <!-- 4 DIMENSIONS SECTION -->
-    <section class="dimensions" id="dimensions">
-      <div class="container">
-        <h2 class="section-title">4 Dimensi yang Diukur</h2>
-        <p class="section-subtitle">
+    <section class="bg-white py-10" id="dimensions">
+      <div class="px-4">
+        <h2
+          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+        >
+          4 Dimensi yang Diukur
+        </h2>
+        <p class="text-center text-gray-600 mb-8">
           MBTI mengukur preferensi Anda di empat dimensi utama yang membentuk
           kepribadian.
         </p>
-        <div class="dimensions-grid">
-          <div class="dimension-card">
-            <h3>Energi (E vs I)</h3>
-            <div class="dimension-poles">
-              <div class="pole">Extraversion (E)</div>
-              <div class="pole">Introversion (I)</div>
+        <div class="space-y-4">
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+            <h3 class="text-xl font-semibold text-primary mb-3">
+              Energi (E vs I)
+            </h3>
+            <div class="flex justify-between mb-3 font-semibold gap-2">
+              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+                Extraversion (E)
+              </div>
+              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+                Introversion (I)
+              </div>
             </div>
-            <p>
+            <p class="text-gray-600 text-sm">
               Dari mana Anda mendapatkan energi - dari dunia luar dan interaksi
               sosial (E), atau dari dunia internal dan refleksi pribadi (I).
               Bukan tentang pemalu atau tidak, tapi tentang sumber energi Anda.
             </p>
           </div>
-          <div class="dimension-card">
-            <h3>Informasi (S vs N)</h3>
-            <div class="dimension-poles">
-              <div class="pole">Sensing (S)</div>
-              <div class="pole">Intuition (N)</div>
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+            <h3 class="text-xl font-semibold text-primary mb-3">
+              Informasi (S vs N)
+            </h3>
+            <div class="flex justify-between mb-3 font-semibold gap-2">
+              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+                Sensing (S)
+              </div>
+              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+                Intuition (N)
+              </div>
             </div>
-            <p>
+            <p class="text-gray-600 text-sm">
               Bagaimana Anda memproses informasi - melalui fakta dan detail
               konkret (S), atau melalui pola dan kemungkinan abstrak (N).
               Keduanya penting, hanya cara yang berbeda.
             </p>
           </div>
-          <div class="dimension-card">
-            <h3>Keputusan (T vs F)</h3>
-            <div class="dimension-poles">
-              <div class="pole">Thinking (T)</div>
-              <div class="pole">Feeling (F)</div>
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+            <h3 class="text-xl font-semibold text-primary mb-3">
+              Keputusan (T vs F)
+            </h3>
+            <div class="flex justify-between mb-3 font-semibold gap-2">
+              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+                Thinking (T)
+              </div>
+              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+                Feeling (F)
+              </div>
             </div>
-            <p>
+            <p class="text-gray-600 text-sm">
               Bagaimana Anda membuat keputusan - berdasarkan logika dan analisis
               objektif (T), atau berdasarkan nilai-nilai pribadi dan dampak pada
               orang lain (F). Bukan tentang cerdas atau emosional.
             </p>
           </div>
-          <div class="dimension-card">
-            <h3>Gaya Hidup (J vs P)</h3>
-            <div class="dimension-poles">
-              <div class="pole">Judging (J)</div>
-              <div class="pole">Perceiving (P)</div>
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+            <h3 class="text-xl font-semibold text-primary mb-3">
+              Gaya Hidup (J vs P)
+            </h3>
+            <div class="flex justify-between mb-3 font-semibold gap-2">
+              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+                Judging (J)
+              </div>
+              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+                Perceiving (P)
+              </div>
             </div>
-            <p>
+            <p class="text-gray-600 text-sm">
               Bagaimana Anda menjalani hidup - terstruktur dan terencana (J),
               atau fleksibel dan spontan (P). Keduanya punya kelebihan,
               tergantung situasi dan kebutuhan Anda.
@@ -965,17 +448,23 @@
     </section>
 
     <!-- FAQ SECTION -->
-    <section class="faq" id="faq">
-      <div class="container">
-        <h2 class="section-title">Pertanyaan Umum</h2>
-        <p class="section-subtitle">
+    <section class="bg-gray-50 py-10" id="faq">
+      <div class="px-4">
+        <h2
+          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+        >
+          Pertanyaan Umum
+        </h2>
+        <p class="text-center text-gray-600 mb-8">
           Jawaban untuk pertanyaan yang sering ditanyakan tentang tes MBTI.
         </p>
-        <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-question">Apa itu MBTI?</div>
-            <div class="faq-answer">
-              <p>
+        <div class="space-y-3">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-5 font-semibold text-primary text-base">
+              Apa itu MBTI?
+            </div>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
+              <p class="pt-3 text-sm">
                 MBTI (Myers-Briggs Type Indicator) adalah alat psikologi populer
                 yang mengklasifikasikan kepribadian ke dalam 16 tipe berdasarkan
                 empat dimensi: Energi (E/I), Informasi (S/N), Keputusan (T/F),
@@ -984,20 +473,24 @@
               </p>
             </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">Berapa lama tes ini?</div>
-            <div class="faq-answer">
-              <p>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-5 font-semibold text-primary text-base">
+              Berapa lama tes ini?
+            </div>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
+              <p class="pt-3 text-sm">
                 Tes ini terdiri dari 60 pertanyaan dan biasanya membutuhkan
                 waktu sekitar 10 menit. Tidak ada batas waktu ketat, jadi Anda
                 bisa menjawab dengan nyaman sesuai kecepatan Anda.
               </p>
             </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">Apakah hasilnya akurat?</div>
-            <div class="faq-answer">
-              <p>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-5 font-semibold text-primary text-base">
+              Apakah hasilnya akurat?
+            </div>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
+              <p class="pt-3 text-sm">
                 Tes MBTI kami berdasarkan pada teori Myers-Briggs yang telah
                 digunakan jutaan orang di seluruh dunia. Hasil tes bersifat
                 edukatif dan membantu pemahaman diri, bukan diagnosis klinis.
@@ -1005,20 +498,24 @@
               </p>
             </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">Bisakah saya mengulang tes?</div>
-            <div class="faq-answer">
-              <p>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-5 font-semibold text-primary text-base">
+              Bisakah saya mengulang tes?
+            </div>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
+              <p class="pt-3 text-sm">
                 Tentu! Anda bisa mengulang tes kapan saja. Hasil mungkin sedikit
                 berbeda tergantung mood atau situasi saat itu. Yang penting
                 adalah pola umum dari hasil Anda, bukan satu hasil spesifik.
               </p>
             </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">Bagaimana cara kerja skor?</div>
-            <div class="faq-answer">
-              <p>
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-5 font-semibold text-primary text-base">
+              Bagaimana cara kerja skor?
+            </div>
+            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
+              <p class="pt-3 text-sm">
                 Setiap dimensi diukur dari 0-100%. Misalnya, E 65% berarti Anda
                 cenderung Extravert dengan kekuatan 65%. Tidak ada tipe "lebih
                 baik" - setiap preferensi punya kelebihan dan tantangan sendiri.
@@ -1031,38 +528,68 @@
     </section>
 
     <!-- CTA SECTION -->
-    <section class="cta-section">
-      <div class="container">
-        <h2>Siap Kenali Diri Anda?</h2>
-        <p>60 pertanyaan. 10 menit. Hasil langsung. Gratis.</p>
+    <section
+      class="bg-gradient-to-br from-primary to-secondary text-white text-center py-16"
+    >
+      <div class="px-4">
+        <h2 class="text-3xl font-bold mb-3 leading-tight">
+          Siap Kenali Diri Anda?
+        </h2>
+        <p class="text-base mb-6 opacity-95">
+          60 pertanyaan. 10 menit. Hasil langsung. Gratis.
+        </p>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-column">
-            <h3>Tentang MBTI Test</h3>
-            <p>
-              Tes MBTI ini bersifat edukatif dan tidak menggantikan konsultasi
-              profesional. Dibuat untuk membantu Anda memahami diri sendiri
-              lebih baik.
-            </p>
-            <p>
-              <strong>100% Client-side</strong> - Data Anda tidak dikirim ke
-              mana pun. Privacy terjaga sepenuhnya.
-            </p>
-          </div>
-          <div class="footer-column">
-            <p style="margin-top: 1rem">
-              &copy; 2026 MBTI Test. Hak cipta dilindungi.
-            </p>
-          </div>
+    <footer class="bg-gray-800 text-white py-10">
+      <div class="px-4 space-y-8 mb-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Tentang MBTI Test</h3>
+          <p class="text-gray-400 text-sm mb-3">
+            Tes MBTI ini bersifat edukatif dan tidak menggantikan konsultasi
+            profesional. Dibuat untuk membantu Anda memahami diri sendiri lebih
+            baik.
+          </p>
+          <p class="text-gray-400 text-sm">
+            <strong class="text-white">100% Client-side</strong> - Data Anda
+            tidak dikirim ke mana pun. Privacy terjaga sepenuhnya.
+          </p>
         </div>
-        <div class="footer-bottom">
-          <p>Dibuat dengan ❤️ untuk membantu Anda mengenal diri sendiri</p>
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Legal</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors text-sm"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors text-sm"
+                >Terms of Use</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors text-sm"
+                >Disclaimer</a
+              >
+            </li>
+          </ul>
+          <p class="text-gray-400 text-sm mt-4">
+            &copy; 2026 MBTI Test. Hak cipta dilindungi.
+          </p>
         </div>
+      </div>
+      <div
+        class="text-center pt-6 border-t border-gray-600 text-gray-400 text-sm"
+      >
+        <p>Dibuat dengan ❤️ untuk membantu Anda mengenal diri sendiri</p>
       </div>
     </footer>
   </body>

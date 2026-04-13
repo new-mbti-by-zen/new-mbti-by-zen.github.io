@@ -1,2 +1,1 @@
-Isi ./landing-page/index.html sesuai dengan rancangan yang di ./landing-page/konsep.txt. Jangan pakai JS sama sekali
-Pada ./landing-page/index.html itu fokus tampilan mobile. Jadi, max width adalah 600px. 
+Pada ./landing-page/index.html, pakai style Tailwind CSS, lalu load dulu Tailwind CDN. Jadi, nggak pakai custom CSS sama sekali
