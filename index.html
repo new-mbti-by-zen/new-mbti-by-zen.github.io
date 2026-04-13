@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Kepribadian MBTI</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🧠 MBTI Test</h1>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#test" class="nav-link">Mulai Tes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Home -->
+        <section id="home" class="section home active">
+            <div class="container">
+                <div class="hero">
+                    <h2>Kenali Diri Anda Lebih Dekat</h2>
+                    <p>Tes MBTI membantu Anda memahami tipe kepribadian, kekuatan, dan cara Anda berinteraksi dengan dunia.</p>
+                    <button id="startTestBtn" class="btn-primary">Mulai Tes Sekarang</button>
+                </div>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>60 Pertanyaan</h3>
+                        <p>Pertanyaan singkat yang mudah dijawab</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <h3>10-15 Menit</h3>
+                        <p>Waktu pengerjaan yang fleksibel</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Hasil Langsung</h3>
+                        <p>Dapatkan hasil dan penjelasan lengkap</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2>Apa itu MBTI?</h2>
+                <p>MBTI (Myers-Briggs Type Indicator) adalah alat psikologi yang membantu memahami 16 tipe kepribadian berbeda berdasarkan 4 dimensi:</p>
+                <div class="dimensions">
+                    <div class="dimension-card">
+                        <div class="dimension-header">
+                            <h3>E - I</h3>
+                            <span>Energi</span>
+                        </div>
+                        <p><strong>Extravert (E):</strong> Mendapat energi dari orang lain</p>
+                        <p><strong>Introvert (I):</strong> Mendapat energi dari waktu sendiri</p>
+                    </div>
+                    <div class="dimension-card">
+                        <div class="dimension-header">
+                            <h3>S - N</h3>
+                            <span>Informasi</span>
+                        </div>
+                        <p><strong>Sensing (S):</strong> Fokus pada fakta dan detail</p>
+                        <p><strong>iNtuition (N):</strong> Fokus pada pola dan kemungkinan</p>
+                    </div>
+                    <div class="dimension-card">
+                        <div class="dimension-header">
+                            <h3>T - F</h3>
+                            <span>Keputusan</span>
+                        </div>
+                        <p><strong>Thinking (T):</strong> Keputusan berdasarkan logika</p>
+                        <p><strong>Feeling (F):</strong> Keputusan berdasarkan perasaan</p>
+                    </div>
+                    <div class="dimension-card">
+                        <div class="dimension-header">
+                            <h3>J - P</h3>
+                            <span>Gaya Hidup</span>
+                        </div>
+                        <p><strong>Judging (J):</strong> Suka terencana dan terstruktur</p>
+                        <p><strong>Perceiving (P):</strong> Suka fleksibel dan spontan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test -->
+        <section id="test" class="section test">
+            <div class="container">
+                <div class="test-header">
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <p class="progress-text">Pertanyaan <span id="currentQuestion">1</span> dari <span id="totalQuestions">0</span></p>
+                </div>
+                <div class="test-content">
+                    <div class="question-container">
+                        <h3 id="questionText" class="question-text"></h3>
+                    </div>
+                    <div class="options-container">
+                        <button class="option-btn" data-value="3"><span class="option-label">Sangat Setuju</span></button>
+                        <button class="option-btn" data-value="2"><span class="option-label">Setuju</span></button>
+                        <button class="option-btn" data-value="1"><span class="option-label">Agak Setuju</span></button>
+                        <button class="option-btn" data-value="0"><span class="option-label">Netral</span></button>
+                        <button class="option-btn" data-value="-1"><span class="option-label">Agak Tidak Setuju</span></button>
+                        <button class="option-btn" data-value="-2"><span class="option-label">Tidak Setuju</span></button>
+                        <button class="option-btn" data-value="-3"><span class="option-label">Sangat Tidak Setuju</span></button>
+                    </div>
+                    <div class="test-nav">
+                        <button id="prevBtn" class="btn-secondary" disabled>Sebelumnya</button>
+                        <button id="nextBtn" class="btn-primary" disabled>Selanjutnya</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section id="results" class="section results">
+            <div class="container">
+                <div class="results-header">
+                    <h2>Hasil Tes Anda</h2>
+                    <div class="type-display">
+                        <span class="type-letter" id="typeLetter1"></span>
+                        <span class="type-letter" id="typeLetter2"></span>
+                        <span class="type-letter" id="typeLetter3"></span>
+                        <span class="type-letter" id="typeLetter4"></span>
+                    </div>
+                    <h3 class="type-name" id="typeName"></h3>
+                </div>
+                <div class="results-content">
+                    <div class="type-description">
+                        <h4>Deskripsi Tipe Anda</h4>
+                        <p id="typeDescription"></p>
+                    </div>
+                    <div class="dimensions-results">
+                        <h4>Skor Dimensi Anda</h4>
+                        <div id="dimensionsContainer"></div>
+                    </div>
+                    <div class="dimension-details">
+                        <h4>Penjelasan Detail Dimensi</h4>
+                        <div id="dimensionDetailsContainer"></div>
+                    </div>
+                    <div class="traits">
+                        <h4>Karakteristik Umum</h4>
+                        <ul id="traitsList"></ul>
+                    </div>
+                    <div class="famous-people">
+                        <h4>Tokoh Terkenal dengan Tipe Anda</h4>
+                        <p id="famousPeople"></p>
+                    </div>
+                </div>
+                <div class="results-actions">
+                    <button id="retakeTest" class="btn-primary">Ulangi Tes</button>
+                    <button id="downloadPdf" class="btn-secondary">Download Hasil (PDF)</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Tes MBTI ini bersifat edukatif dan tidak menggantikan konsultasi profesional.</p>
+            <p>&copy; 2026 MBTI Test. Dibuat untuk pembelajaran.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/dimensions-detail.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

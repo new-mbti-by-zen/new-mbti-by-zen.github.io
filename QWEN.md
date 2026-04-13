@@ -1,0 +1,3 @@
+- Website dengan HTML, CSS, JS
+- CSS dan JS pecah-pecah sesuai fungsi
+- Tampilan mudah dimengerti orang awam

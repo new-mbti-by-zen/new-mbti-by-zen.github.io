@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Progress</title>
+    <style>
+        body { font-family: monospace; padding: 30px; background: #111; color: #0f0; }
+        .bar-bg { background: #333; height: 30px; border-radius: 5px; overflow: hidden; margin: 10px 0; }
+        .bar-fill { background: #4a6fa5; height: 100%; width: 0%; transition: width 0.3s; }
+        #log { background: #222; padding: 15px; margin-top: 20px; max-height: 300px; overflow-y: auto; }
+        button { padding: 10px 20px; margin: 5px; background: #4a6fa5; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Test Progress Bar</h1>
+    <p>Total: <span id="total">0</span> | Answered: <span id="answered">0</span> | Progress: <span id="pct">0</span>%</p>
+    <div class="bar-bg"><div class="bar-fill" id="bar"></div></div>
+    <button onclick="simulate()">▶️ Simulate Answer All</button>
+    <div id="log"></div>
+
+    <script src="js/questions.js"></script>
+    <script>
+        const TOTAL = questions.length;
+        let answers = {};
+        
+        document.getElementById('total').textContent = TOTAL;
+        document.getElementById('answered').textContent = '0';
+        document.getElementById('pct').textContent = '0';
+        
+        function update() {
+            const count = Object.keys(answers).length;
+            const pct = (count / TOTAL) * 100;
+            document.getElementById('answered').textContent = count;
+            document.getElementById('pct').textContent = pct.toFixed(1);
+            document.getElementById('bar').style.width = pct + '%';
+            return pct;
+        }
+        
+        function simulate() {
+            answers = {};
+            document.getElementById('log').innerHTML = '<h3>Simulating...</h3>';
+            
+            for (let i = 0; i < TOTAL; i++) {
+                answers[questions[i].id] = 2;
+                const pct = update();
+                if ((i + 1) % 15 === 0 || i === TOTAL - 1) {
+                    document.getElementById('log').innerHTML += `<div>Q${i+1}: ${i+1}/${TOTAL} = ${pct.toFixed(1)}%</div>`;
+                }
+            }
+            
+            const finalPct = update();
+            document.getElementById('log').innerHTML += `<h2 style="color: #7fec9f">FINAL: ${finalPct.toFixed(1)}%</h2>`;
+            
+            if (finalPct === 100) {
+                document.getElementById('log').innerHTML += '<h2 style="color: #7fec9f">✅ CORRECT! Progress is 100%!</h2>';
+            } else {
+                document.getElementById('log').innerHTML += `<h2 style="color: #ff6b6b">❌ WRONG! Expected 100, got ${finalPct}%</h2>`;
+            }
+        }
+    </script>
+</body>
+</html>
