@@ -8,463 +8,1077 @@
       content="Tes MBTI online gratis. 60 pertanyaan, hasil instan, laporan lengkap. Kenali diri Anda dalam 10 menit."
     />
     <title>Tes MBTI Online Gratis - Kenali Diri Anda dalam 10 Menit</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#4a6fa5",
-              secondary: "#6b8cce",
-              accent: "#ff6b6b",
-              "accent-hover": "#e55a5a",
-            },
-          },
-        },
-      };
-    </script>
   </head>
-  <body class="max-w-[600px] mx-auto bg-white text-gray-800 leading-relaxed">
-    <!-- NAVIGATION -->
-    <nav class="sticky top-0 z-50 bg-white shadow-md py-3">
-      <div class="flex justify-between items-center px-4">
-        <a href="#" class="text-xl font-bold text-primary">🧠 MBTI Test</a>
-      </div>
-    </nav>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    "
+  >
+    <div style="max-width: 600px; margin: 0 auto">
+      <!-- HERO SECTION -->
+      <section
+        style="
+          background: linear-gradient(135deg, #4a6fa5, #6b8cce);
+          color: #fff;
+          padding: 60px 20px;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+              radial-gradient(
+                circle at 20% 50%,
+                rgba(255, 255, 255, 0.1) 0%,
+                transparent 50%
+              ),
+              radial-gradient(
+                circle at 80% 80%,
+                rgba(255, 255, 255, 0.1) 0%,
+                transparent 50%
+              );
+            pointer-events: none;
+          "
+        ></div>
+        <div style="position: relative; z-index: 1">
+          <h1
+            style="
+              font-size: 28px;
+              font-weight: bold;
+              margin-bottom: 16px;
+              line-height: 1.3;
+            "
+          >
+            Kenali Diri Anda dalam 10 Menit
+          </h1>
+          <p style="font-size: 16px; opacity: 0.95; margin-bottom: 24px">
+            Temukan tipe kepribadian Anda dengan tes MBTI gratis. 60 pertanyaan,
+            hasil langsung, laporan lengkap.
+          </p>
+        </div>
+      </section>
 
-    <!-- HERO SECTION -->
-    <section
-      class="bg-gradient-to-br from-primary to-secondary text-white py-16 relative overflow-hidden"
-    >
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.1)_0%,transparent_50%)] pointer-events-none"
-      ></div>
-      <div class="relative z-10 px-4 text-center">
-        <h1 class="text-3xl font-bold mb-4 leading-tight">
-          Kenali Diri Anda dalam 10 Menit
-        </h1>
-        <p class="text-base mb-6 opacity-95">
-          Temukan tipe kepribadian Anda dengan tes MBTI gratis. 60 pertanyaan,
-          hasil langsung, laporan lengkap.
-        </p>
-      </div>
-    </section>
-
-    <!-- STATS SECTION -->
-    <section class="bg-gray-50 py-8">
-      <div class="px-4">
-        <div class="grid grid-cols-2 gap-4">
-          <div class="bg-white p-6 rounded-xl shadow-md text-center">
-            <div class="text-4xl font-bold text-primary mb-1">16</div>
-            <div class="text-sm text-gray-600">Tipe Kepribadian</div>
+      <!-- STATS SECTION -->
+      <section style="background: #f9fafb; padding: 32px 20px">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+          "
+        >
+          <div
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                font-size: 36px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 4px;
+              "
+            >
+              16
+            </div>
+            <div style="font-size: 14px; color: #666">Tipe Kepribadian</div>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow-md text-center">
-            <div class="text-4xl font-bold text-primary mb-1">10</div>
-            <div class="text-sm text-gray-600">Menit Waktu Tes</div>
+          <div
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                font-size: 36px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 4px;
+              "
+            >
+              10
+            </div>
+            <div style="font-size: 14px; color: #666">Menit Waktu Tes</div>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow-md text-center">
-            <div class="text-4xl font-bold text-primary mb-1">60</div>
-            <div class="text-sm text-gray-600">Pertanyaan Mudah</div>
+          <div
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                font-size: 36px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 4px;
+              "
+            >
+              60
+            </div>
+            <div style="font-size: 14px; color: #666">Pertanyaan Mudah</div>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow-md text-center">
-            <div class="text-4xl font-bold text-primary mb-1">7</div>
-            <div class="text-sm text-gray-600">Aspek Kehidupan</div>
+          <div
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                font-size: 36px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 4px;
+              "
+            >
+              7
+            </div>
+            <div style="font-size: 14px; color: #666">Aspek Kehidupan</div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PAIN POINTS SECTION -->
-    <section class="bg-white py-10">
-      <div class="px-4">
+      <!-- PAIN POINTS SECTION -->
+      <section style="padding: 40px 20px; background: #fff">
         <h2
-          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+          style="
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a6fa5;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.3;
+          "
         >
           Pernahkah Anda Merasa...
         </h2>
-        <ul class="list-none mb-8 space-y-3">
-          <li
-            class="bg-gray-50 p-4 rounded-lg text-base flex items-start gap-3"
+        <div style="margin-bottom: 32px">
+          <div
+            style="
+              background: #f9fafb;
+              padding: 16px;
+              border-radius: 8px;
+              margin-bottom: 12px;
+              font-size: 16px;
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+            "
           >
-            <span class="text-xl flex-shrink-0">❌</span>
+            <span style="font-size: 20px; flex-shrink: 0">❌</span>
             <span>Bingung kenapa sulit bergaul di keramaian?</span>
-          </li>
-          <li
-            class="bg-gray-50 p-4 rounded-lg text-base flex items-start gap-3"
+          </div>
+          <div
+            style="
+              background: #f9fafb;
+              padding: 16px;
+              border-radius: 8px;
+              margin-bottom: 12px;
+              font-size: 16px;
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+            "
           >
-            <span class="text-xl flex-shrink-0">❌</span>
+            <span style="font-size: 20px; flex-shrink: 0">❌</span>
             <span>Sulit mengambil keputusan penting?</span>
-          </li>
-          <li
-            class="bg-gray-50 p-4 rounded-lg text-base flex items-start gap-3"
+          </div>
+          <div
+            style="
+              background: #f9fafb;
+              padding: 16px;
+              border-radius: 8px;
+              margin-bottom: 12px;
+              font-size: 16px;
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+            "
           >
-            <span class="text-xl flex-shrink-0">❌</span>
+            <span style="font-size: 20px; flex-shrink: 0">❌</span>
             <span>Tidak paham kenapa sering clash dengan orang lain?</span>
-          </li>
-          <li
-            class="bg-gray-50 p-4 rounded-lg text-base flex items-start gap-3"
+          </div>
+          <div
+            style="
+              background: #f9fafb;
+              padding: 16px;
+              border-radius: 8px;
+              margin-bottom: 12px;
+              font-size: 16px;
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+            "
           >
-            <span class="text-xl flex-shrink-0">❌</span>
+            <span style="font-size: 20px; flex-shrink: 0">❌</span>
             <span>Ingin tahu karir yang cocok?</span>
-          </li>
-        </ul>
-        <div class="bg-gray-50 p-6 rounded-xl text-center">
-          <h3 class="text-xl font-semibold text-primary mb-3">
+          </div>
+        </div>
+        <div
+          style="
+            background: #f9fafb;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+          "
+        >
+          <h3 style="font-size: 20px; color: #4a6fa5; margin-bottom: 12px">
             Anda Tidak Sendiri
           </h3>
-          <p class="text-base text-gray-600">
+          <p style="color: #666; font-size: 16px">
             MBTI membantu Anda memahami diri sendiri, mengapa Anda bereaksi
             terhadap situasi tertentu, dan bagaimana Anda bisa berinteraksi
             lebih baik dengan orang lain.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- BENEFITS SECTION -->
-    <section class="bg-gray-50 py-10" id="benefits">
-      <div class="px-4">
+      <!-- BENEFITS SECTION -->
+      <section style="padding: 40px 20px; background: #f9fafb">
         <h2
-          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+          style="
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a6fa5;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.3;
+          "
         >
           Kenapa Harus Tes MBTI Kami?
         </h2>
-        <p class="text-center text-gray-600 mb-8">
+        <p style="text-align: center; color: #666; margin-bottom: 32px">
           Tes yang dirancang untuk memberikan pemahaman mendalam tentang diri
           Anda dengan cara yang mudah dan menyenangkan.
         </p>
-        <div class="space-y-4">
+        <div style="display: flex; flex-direction: column; gap: 16px">
           <div
-            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
           >
-            <div class="text-3xl mb-3">📝</div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <div style="font-size: 32px; margin-bottom: 12px">📝</div>
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               60 Pertanyaan Mudah
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Tidak ada jawaban benar atau salah. Jawab sesuai perasaan Anda dan
               biarkan hasil berbicara.
             </p>
           </div>
           <div
-            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
           >
-            <div class="text-3xl mb-3">⚡</div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <div style="font-size: 32px; margin-bottom: 12px">⚡</div>
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               Hasil Instan
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Langsung tahu tipe kepribadian Anda begitu selesai tes. Tidak
               perlu menunggu email atau pendaftaran.
             </p>
           </div>
           <div
-            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
           >
-            <div class="text-3xl mb-3">📊</div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <div style="font-size: 32px; margin-bottom: 12px">📊</div>
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               Laporan Lengkap
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Skor 4 dimensi dengan grafik yang mudah dipahami. Bukan cuma 4
               huruf tanpa konteks.
             </p>
           </div>
           <div
-            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
           >
-            <div class="text-3xl mb-3">💼</div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <div style="font-size: 32px; margin-bottom: 12px">💼</div>
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               Detail 7 Aspek
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Analisis mendalam untuk Karir, Pendidikan, Romansa, Komunikasi,
               dan aspek kehidupan lainnya.
             </p>
           </div>
           <div
-            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
           >
-            <div class="text-3xl mb-3">📄</div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <div style="font-size: 32px; margin-bottom: 12px">📄</div>
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               Download PDF
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Simpan hasil tes Anda dalam format PDF. Bisa dicetak atau
               dibagikan ke orang lain.
             </p>
           </div>
           <div
-            class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+            style="
+              background: #fff;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            "
           >
-            <div class="text-3xl mb-3">🎯</div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <div style="font-size: 32px; margin-bottom: 12px">🎯</div>
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               16 Tipe Lengkap
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Deskripsi mendalam untuk setiap tipe kepribadian. Pahami diri
               sendiri dan orang lain lebih baik.
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- HOW IT WORKS SECTION -->
-    <section class="bg-white py-10" id="how-it-works">
-      <div class="px-4">
+      <!-- HOW IT WORKS SECTION -->
+      <section style="padding: 40px 20px; background: #fff">
         <h2
-          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+          style="
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a6fa5;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.3;
+          "
         >
           3 Langkah Mudah
         </h2>
-        <p class="text-center text-gray-600 mb-8">
+        <p style="text-align: center; color: #666; margin-bottom: 32px">
           Proses yang simpel untuk mengenal diri Anda lebih dalam.
         </p>
-        <div class="space-y-6">
-          <div class="text-center p-6 bg-gray-50 rounded-xl">
+        <div style="display: flex; flex-direction: column; gap: 24px">
+          <div
+            style="
+              text-align: center;
+              padding: 24px;
+              background: #f9fafb;
+              border-radius: 12px;
+            "
+          >
             <div
-              class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+              style="
+                width: 56px;
+                height: 56px;
+                background: #4a6fa5;
+                color: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin: 0 auto 16px;
+              "
             >
               1
             </div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               Jawab 60 Pertanyaan
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Pilih jawaban yang paling sesuai dengan perasaan Anda. Tidak ada
               jawaban benar atau salah.
             </p>
           </div>
-          <div class="text-center p-6 bg-gray-50 rounded-xl">
+          <div
+            style="
+              text-align: center;
+              padding: 24px;
+              background: #f9fafb;
+              border-radius: 12px;
+            "
+          >
             <div
-              class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+              style="
+                width: 56px;
+                height: 56px;
+                background: #4a6fa5;
+                color: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin: 0 auto 16px;
+              "
             >
               2
             </div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               Lihat Hasil Langsung
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Setelah selesai, Anda langsung bisa melihat tipe kepribadian dan
               skor dimensi Anda.
             </p>
           </div>
-          <div class="text-center p-6 bg-gray-50 rounded-xl">
+          <div
+            style="
+              text-align: center;
+              padding: 24px;
+              background: #f9fafb;
+              border-radius: 12px;
+            "
+          >
             <div
-              class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+              style="
+                width: 56px;
+                height: 56px;
+                background: #4a6fa5;
+                color: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 28px;
+                font-weight: bold;
+                margin: 0 auto 16px;
+              "
             >
               3
             </div>
-            <h3 class="text-lg font-semibold text-primary mb-2">
+            <h3
+              style="
+                font-size: 18px;
+                font-weight: bold;
+                color: #4a6fa5;
+                margin-bottom: 8px;
+              "
+            >
               Download PDF
             </h3>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Simpan hasil tes Anda dalam format PDF untuk referensi atau
               dibagikan ke orang lain.
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SAMPLE RESULTS SECTION -->
-    <section class="bg-gray-50 py-10" id="sample-results">
-      <div class="px-4">
+      <!-- SAMPLE RESULTS SECTION -->
+      <section style="padding: 40px 20px; background: #f9fafb">
         <h2
-          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+          style="
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a6fa5;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.3;
+          "
         >
           Contoh Hasil Tes
         </h2>
-        <p class="text-center text-gray-600 mb-8">
+        <p style="text-align: center; color: #666; margin-bottom: 32px">
           Seperti ini laporan yang akan Anda dapatkan setelah menyelesaikan tes.
         </p>
-        <div class="bg-white rounded-xl p-6 shadow-md mb-6">
-          <div class="text-center mb-6 pb-6 border-b-2 border-gray-50">
+        <div
+          style="
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 24px;
+              padding-bottom: 24px;
+              border-bottom: 2px solid #f9fafb;
+            "
+          >
             <div
-              class="text-3xl font-bold text-primary bg-gray-50 inline-block px-6 py-3 rounded-lg mb-3"
+              style="
+                font-size: 28px;
+                font-weight: bold;
+                color: #4a6fa5;
+                background: #f9fafb;
+                display: inline-block;
+                padding: 12px 24px;
+                border-radius: 8px;
+                margin-bottom: 12px;
+              "
             >
               INTJ - The Architect
             </div>
-            <p class="text-sm text-gray-600">
+            <p style="font-size: 14px; color: #666">
               Pemikir strategis dengan visi jangka panjang dan standar tinggi.
             </p>
           </div>
-          <div class="space-y-4 mb-6">
-            <div class="bg-gray-50 p-4 rounded-lg">
-              <div class="flex justify-between mb-2 font-semibold text-sm">
+          <div style="margin-bottom: 24px">
+            <div
+              style="
+                background: #f9fafb;
+                padding: 16px;
+                border-radius: 8px;
+                margin-bottom: 16px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 8px;
+                  font-weight: bold;
+                  font-size: 14px;
+                "
+              >
                 <span>Energi</span>
                 <span>I - 72%</span>
               </div>
-              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div
+                style="
+                  height: 8px;
+                  background: #e5e7eb;
+                  border-radius: 4px;
+                  overflow: hidden;
+                "
+              >
                 <div
-                  class="h-full bg-primary rounded-full"
-                  style="width: 72%"
+                  style="
+                    height: 100%;
+                    background: #4a6fa5;
+                    border-radius: 4px;
+                    width: 72%;
+                  "
                 ></div>
               </div>
             </div>
-            <div class="bg-gray-50 p-4 rounded-lg">
-              <div class="flex justify-between mb-2 font-semibold text-sm">
+            <div
+              style="
+                background: #f9fafb;
+                padding: 16px;
+                border-radius: 8px;
+                margin-bottom: 16px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 8px;
+                  font-weight: bold;
+                  font-size: 14px;
+                "
+              >
                 <span>Informasi</span>
                 <span>N - 68%</span>
               </div>
-              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div
+                style="
+                  height: 8px;
+                  background: #e5e7eb;
+                  border-radius: 4px;
+                  overflow: hidden;
+                "
+              >
                 <div
-                  class="h-full bg-primary rounded-full"
-                  style="width: 68%"
+                  style="
+                    height: 100%;
+                    background: #4a6fa5;
+                    border-radius: 4px;
+                    width: 68%;
+                  "
                 ></div>
               </div>
             </div>
-            <div class="bg-gray-50 p-4 rounded-lg">
-              <div class="flex justify-between mb-2 font-semibold text-sm">
+            <div
+              style="
+                background: #f9fafb;
+                padding: 16px;
+                border-radius: 8px;
+                margin-bottom: 16px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 8px;
+                  font-weight: bold;
+                  font-size: 14px;
+                "
+              >
                 <span>Keputusan</span>
                 <span>T - 81%</span>
               </div>
-              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div
+                style="
+                  height: 8px;
+                  background: #e5e7eb;
+                  border-radius: 4px;
+                  overflow: hidden;
+                "
+              >
                 <div
-                  class="h-full bg-primary rounded-full"
-                  style="width: 81%"
+                  style="
+                    height: 100%;
+                    background: #4a6fa5;
+                    border-radius: 4px;
+                    width: 81%;
+                  "
                 ></div>
               </div>
             </div>
-            <div class="bg-gray-50 p-4 rounded-lg">
-              <div class="flex justify-between mb-2 font-semibold text-sm">
+            <div
+              style="
+                background: #f9fafb;
+                padding: 16px;
+                border-radius: 8px;
+                margin-bottom: 16px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 8px;
+                  font-weight: bold;
+                  font-size: 14px;
+                "
+              >
                 <span>Gaya Hidup</span>
                 <span>J - 65%</span>
               </div>
-              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div
+                style="
+                  height: 8px;
+                  background: #e5e7eb;
+                  border-radius: 4px;
+                  overflow: hidden;
+                "
+              >
                 <div
-                  class="h-full bg-primary rounded-full"
-                  style="width: 65%"
+                  style="
+                    height: 100%;
+                    background: #4a6fa5;
+                    border-radius: 4px;
+                    width: 65%;
+                  "
                 ></div>
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-1 gap-3">
-            <div class="bg-gray-50 p-4 rounded-lg text-center">
-              <h4 class="text-primary font-semibold mb-1">💼 Karir</h4>
-              <p class="text-xs text-gray-600">Analisis kecocokan karir</p>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 12px;
+            "
+          >
+            <div
+              style="
+                background: #f9fafb;
+                padding: 16px;
+                border-radius: 8px;
+                text-align: center;
+              "
+            >
+              <div
+                style="color: #4a6fa5; font-weight: bold; margin-bottom: 4px"
+              >
+                💼 Karir
+              </div>
+              <p style="font-size: 12px; color: #666">
+                Analisis kecocokan karir
+              </p>
             </div>
-            <div class="bg-gray-50 p-4 rounded-lg text-center">
-              <h4 class="text-primary font-semibold mb-1">📚 Pendidikan</h4>
-              <p class="text-xs text-gray-600">Gaya belajar ideal</p>
+            <div
+              style="
+                background: #f9fafb;
+                padding: 16px;
+                border-radius: 8px;
+                text-align: center;
+              "
+            >
+              <div
+                style="color: #4a6fa5; font-weight: bold; margin-bottom: 4px"
+              >
+                📚 Pendidikan
+              </div>
+              <p style="font-size: 12px; color: #666">Gaya belajar ideal</p>
             </div>
-            <div class="bg-gray-50 p-4 rounded-lg text-center">
-              <h4 class="text-primary font-semibold mb-1">❤️ Romansa</h4>
-              <p class="text-xs text-gray-600">Kompatibilitas hubungan</p>
+            <div
+              style="
+                background: #f9fafb;
+                padding: 16px;
+                border-radius: 8px;
+                text-align: center;
+              "
+            >
+              <div
+                style="color: #4a6fa5; font-weight: bold; margin-bottom: 4px"
+              >
+                ❤️ Romansa
+              </div>
+              <p style="font-size: 12px; color: #666">
+                Kompatibilitas hubungan
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 4 DIMENSIONS SECTION -->
-    <section class="bg-white py-10" id="dimensions">
-      <div class="px-4">
+      <!-- 4 DIMENSIONS SECTION -->
+      <section style="padding: 40px 20px; background: #fff">
         <h2
-          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+          style="
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a6fa5;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.3;
+          "
         >
           4 Dimensi yang Diukur
         </h2>
-        <p class="text-center text-gray-600 mb-8">
+        <p style="text-align: center; color: #666; margin-bottom: 32px">
           MBTI mengukur preferensi Anda di empat dimensi utama yang membentuk
           kepribadian.
         </p>
-        <div class="space-y-4">
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
-            <h3 class="text-xl font-semibold text-primary mb-3">
+        <div>
+          <div
+            style="
+              background: #f9fafb;
+              padding: 24px;
+              border-radius: 12px;
+              border-left: 4px solid #4a6fa5;
+              margin-bottom: 16px;
+            "
+          >
+            <h3 style="font-size: 20px; color: #4a6fa5; margin-bottom: 12px">
               Energi (E vs I)
             </h3>
-            <div class="flex justify-between mb-3 font-semibold gap-2">
-              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+            <div style="display: flex; gap: 8px; margin-bottom: 12px">
+              <div
+                style="
+                  background: #fff;
+                  padding: 8px;
+                  border-radius: 8px;
+                  text-align: center;
+                  flex: 1;
+                  font-size: 14px;
+                  font-weight: bold;
+                "
+              >
                 Extraversion (E)
               </div>
-              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+              <div
+                style="
+                  background: #fff;
+                  padding: 8px;
+                  border-radius: 8px;
+                  text-align: center;
+                  flex: 1;
+                  font-size: 14px;
+                  font-weight: bold;
+                "
+              >
                 Introversion (I)
               </div>
             </div>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Dari mana Anda mendapatkan energi - dari dunia luar dan interaksi
               sosial (E), atau dari dunia internal dan refleksi pribadi (I).
               Bukan tentang pemalu atau tidak, tapi tentang sumber energi Anda.
             </p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
-            <h3 class="text-xl font-semibold text-primary mb-3">
+          <div
+            style="
+              background: #f9fafb;
+              padding: 24px;
+              border-radius: 12px;
+              border-left: 4px solid #4a6fa5;
+              margin-bottom: 16px;
+            "
+          >
+            <h3 style="font-size: 20px; color: #4a6fa5; margin-bottom: 12px">
               Informasi (S vs N)
             </h3>
-            <div class="flex justify-between mb-3 font-semibold gap-2">
-              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+            <div style="display: flex; gap: 8px; margin-bottom: 12px">
+              <div
+                style="
+                  background: #fff;
+                  padding: 8px;
+                  border-radius: 8px;
+                  text-align: center;
+                  flex: 1;
+                  font-size: 14px;
+                  font-weight: bold;
+                "
+              >
                 Sensing (S)
               </div>
-              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+              <div
+                style="
+                  background: #fff;
+                  padding: 8px;
+                  border-radius: 8px;
+                  text-align: center;
+                  flex: 1;
+                  font-size: 14px;
+                  font-weight: bold;
+                "
+              >
                 Intuition (N)
               </div>
             </div>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Bagaimana Anda memproses informasi - melalui fakta dan detail
               konkret (S), atau melalui pola dan kemungkinan abstrak (N).
               Keduanya penting, hanya cara yang berbeda.
             </p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
-            <h3 class="text-xl font-semibold text-primary mb-3">
+          <div
+            style="
+              background: #f9fafb;
+              padding: 24px;
+              border-radius: 12px;
+              border-left: 4px solid #4a6fa5;
+              margin-bottom: 16px;
+            "
+          >
+            <h3 style="font-size: 20px; color: #4a6fa5; margin-bottom: 12px">
               Keputusan (T vs F)
             </h3>
-            <div class="flex justify-between mb-3 font-semibold gap-2">
-              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+            <div style="display: flex; gap: 8px; margin-bottom: 12px">
+              <div
+                style="
+                  background: #fff;
+                  padding: 8px;
+                  border-radius: 8px;
+                  text-align: center;
+                  flex: 1;
+                  font-size: 14px;
+                  font-weight: bold;
+                "
+              >
                 Thinking (T)
               </div>
-              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+              <div
+                style="
+                  background: #fff;
+                  padding: 8px;
+                  border-radius: 8px;
+                  text-align: center;
+                  flex: 1;
+                  font-size: 14px;
+                  font-weight: bold;
+                "
+              >
                 Feeling (F)
               </div>
             </div>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Bagaimana Anda membuat keputusan - berdasarkan logika dan analisis
               objektif (T), atau berdasarkan nilai-nilai pribadi dan dampak pada
               orang lain (F). Bukan tentang cerdas atau emosional.
             </p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
-            <h3 class="text-xl font-semibold text-primary mb-3">
+          <div
+            style="
+              background: #f9fafb;
+              padding: 24px;
+              border-radius: 12px;
+              border-left: 4px solid #4a6fa5;
+              margin-bottom: 16px;
+            "
+          >
+            <h3 style="font-size: 20px; color: #4a6fa5; margin-bottom: 12px">
               Gaya Hidup (J vs P)
             </h3>
-            <div class="flex justify-between mb-3 font-semibold gap-2">
-              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+            <div style="display: flex; gap: 8px; margin-bottom: 12px">
+              <div
+                style="
+                  background: #fff;
+                  padding: 8px;
+                  border-radius: 8px;
+                  text-align: center;
+                  flex: 1;
+                  font-size: 14px;
+                  font-weight: bold;
+                "
+              >
                 Judging (J)
               </div>
-              <div class="bg-white p-2 rounded-lg text-center flex-1 text-sm">
+              <div
+                style="
+                  background: #fff;
+                  padding: 8px;
+                  border-radius: 8px;
+                  text-align: center;
+                  flex: 1;
+                  font-size: 14px;
+                  font-weight: bold;
+                "
+              >
                 Perceiving (P)
               </div>
             </div>
-            <p class="text-gray-600 text-sm">
+            <p style="color: #666; font-size: 14px">
               Bagaimana Anda menjalani hidup - terstruktur dan terencana (J),
               atau fleksibel dan spontan (P). Keduanya punya kelebihan,
               tergantung situasi dan kebutuhan Anda.
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ SECTION -->
-    <section class="bg-gray-50 py-10" id="faq">
-      <div class="px-4">
+      <!-- FAQ SECTION -->
+      <section style="padding: 40px 20px; background: #f9fafb">
         <h2
-          class="text-2xl font-bold text-center text-primary mb-3 leading-tight"
+          style="
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a6fa5;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.3;
+          "
         >
           Pertanyaan Umum
         </h2>
-        <p class="text-center text-gray-600 mb-8">
+        <p style="text-align: center; color: #666; margin-bottom: 32px">
           Jawaban untuk pertanyaan yang sering ditanyakan tentang tes MBTI.
         </p>
-        <div class="space-y-3">
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-5 font-semibold text-primary text-base">
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <div
+            style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);overflow-hidden;"
+          >
+            <div
+              style="
+                padding: 20px;
+                font-weight: bold;
+                color: #4a6fa5;
+                font-size: 16px;
+              "
+            >
               Apa itu MBTI?
             </div>
-            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
-              <p class="pt-3 text-sm">
+            <div
+              style="
+                padding: 0 20px 20px;
+                color: #666;
+                border-top: 1px solid #f9fafb;
+              "
+            >
+              <p style="padding-top: 12px; font-size: 14px">
                 MBTI (Myers-Briggs Type Indicator) adalah alat psikologi populer
                 yang mengklasifikasikan kepribadian ke dalam 16 tipe berdasarkan
                 empat dimensi: Energi (E/I), Informasi (S/N), Keputusan (T/F),
@@ -473,24 +1087,64 @@
               </p>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-5 font-semibold text-primary text-base">
+          <div
+            style="
+              background: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                padding: 20px;
+                font-weight: bold;
+                color: #4a6fa5;
+                font-size: 16px;
+              "
+            >
               Berapa lama tes ini?
             </div>
-            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
-              <p class="pt-3 text-sm">
+            <div
+              style="
+                padding: 0 20px 20px;
+                color: #666;
+                border-top: 1px solid #f9fafb;
+              "
+            >
+              <p style="padding-top: 12px; font-size: 14px">
                 Tes ini terdiri dari 60 pertanyaan dan biasanya membutuhkan
                 waktu sekitar 10 menit. Tidak ada batas waktu ketat, jadi Anda
                 bisa menjawab dengan nyaman sesuai kecepatan Anda.
               </p>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-5 font-semibold text-primary text-base">
+          <div
+            style="
+              background: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                padding: 20px;
+                font-weight: bold;
+                color: #4a6fa5;
+                font-size: 16px;
+              "
+            >
               Apakah hasilnya akurat?
             </div>
-            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
-              <p class="pt-3 text-sm">
+            <div
+              style="
+                padding: 0 20px 20px;
+                color: #666;
+                border-top: 1px solid #f9fafb;
+              "
+            >
+              <p style="padding-top: 12px; font-size: 14px">
                 Tes MBTI kami berdasarkan pada teori Myers-Briggs yang telah
                 digunakan jutaan orang di seluruh dunia. Hasil tes bersifat
                 edukatif dan membantu pemahaman diri, bukan diagnosis klinis.
@@ -498,24 +1152,64 @@
               </p>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-5 font-semibold text-primary text-base">
+          <div
+            style="
+              background: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                padding: 20px;
+                font-weight: bold;
+                color: #4a6fa5;
+                font-size: 16px;
+              "
+            >
               Bisakah saya mengulang tes?
             </div>
-            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
-              <p class="pt-3 text-sm">
+            <div
+              style="
+                padding: 0 20px 20px;
+                color: #666;
+                border-top: 1px solid #f9fafb;
+              "
+            >
+              <p style="padding-top: 12px; font-size: 14px">
                 Tentu! Anda bisa mengulang tes kapan saja. Hasil mungkin sedikit
                 berbeda tergantung mood atau situasi saat itu. Yang penting
                 adalah pola umum dari hasil Anda, bukan satu hasil spesifik.
               </p>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-5 font-semibold text-primary text-base">
+          <div
+            style="
+              background: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                padding: 20px;
+                font-weight: bold;
+                color: #4a6fa5;
+                font-size: 16px;
+              "
+            >
               Bagaimana cara kerja skor?
             </div>
-            <div class="px-5 pb-5 text-gray-600 border-t border-gray-50">
-              <p class="pt-3 text-sm">
+            <div
+              style="
+                padding: 0 20px 20px;
+                color: #666;
+                border-top: 1px solid #f9fafb;
+              "
+            >
+              <p style="padding-top: 12px; font-size: 14px">
                 Setiap dimensi diukur dari 0-100%. Misalnya, E 65% berarti Anda
                 cenderung Extravert dengan kekuatan 65%. Tidak ada tipe "lebih
                 baik" - setiap preferensi punya kelebihan dan tantangan sendiri.
@@ -524,73 +1218,67 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CTA SECTION -->
-    <section
-      class="bg-gradient-to-br from-primary to-secondary text-white text-center py-16"
-    >
-      <div class="px-4">
-        <h2 class="text-3xl font-bold mb-3 leading-tight">
+      <!-- CTA SECTION -->
+      <section
+        style="
+          background: linear-gradient(135deg, #4a6fa5, #6b8cce);
+          color: #fff;
+          text-align: center;
+          padding: 64px 20px;
+        "
+      >
+        <h2
+          style="
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            line-height: 1.3;
+          "
+        >
           Siap Kenali Diri Anda?
         </h2>
-        <p class="text-base mb-6 opacity-95">
+        <p style="font-size: 16px; opacity: 0.95">
           60 pertanyaan. 10 menit. Hasil langsung. Gratis.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-800 text-white py-10">
-      <div class="px-4 space-y-8 mb-8">
-        <div>
-          <h3 class="text-lg font-semibold mb-3">Tentang MBTI Test</h3>
-          <p class="text-gray-400 text-sm mb-3">
-            Tes MBTI ini bersifat edukatif dan tidak menggantikan konsultasi
-            profesional. Dibuat untuk membantu Anda memahami diri sendiri lebih
-            baik.
-          </p>
-          <p class="text-gray-400 text-sm">
-            <strong class="text-white">100% Client-side</strong> - Data Anda
-            tidak dikirim ke mana pun. Privacy terjaga sepenuhnya.
+      <!-- FOOTER -->
+      <footer style="background: #1f2937; color: #fff; padding: 40px 20px">
+        <div style="margin-bottom: 32px">
+          <div>
+            <h3 style="font-size: 18px; margin-bottom: 12px">
+              Tentang MBTI Test
+            </h3>
+            <p style="color: #9ca3af; font-size: 14px; margin-bottom: 12px">
+              Tes MBTI ini bersifat edukatif dan tidak menggantikan konsultasi
+              profesional. Dibuat untuk membantu Anda memahami diri sendiri
+              lebih baik.
+            </p>
+            <p style="color: #9ca3af; font-size: 14px; margin-bottom: 12px">
+              <strong style="color: #fff">100% Client-side</strong> - Data Anda
+              tidak dikirim ke mana pun. Privacy terjaga sepenuhnya.
+            </p>
+            <p style="color: #9ca3af; font-size: 14px">
+              &copy; 2026 MBTI Test. Hak cipta dilindungi.
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #4b5563;
+            color: #9ca3af;
+            font-size: 14px;
+          "
+        >
+          <p style="margin-bottom: 8px">
+            Dibuat dengan ❤️ untuk membantu Anda mengenal diri sendiri
           </p>
         </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-3">Legal</h3>
-          <ul class="space-y-2">
-            <li>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors text-sm"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors text-sm"
-                >Terms of Use</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors text-sm"
-                >Disclaimer</a
-              >
-            </li>
-          </ul>
-          <p class="text-gray-400 text-sm mt-4">
-            &copy; 2026 MBTI Test. Hak cipta dilindungi.
-          </p>
-        </div>
-      </div>
-      <div
-        class="text-center pt-6 border-t border-gray-600 text-gray-400 text-sm"
-      >
-        <p>Dibuat dengan ❤️ untuk membantu Anda mengenal diri sendiri</p>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,1 +1,9 @@
-Pada ./landing-page/index.html, pakai style Tailwind CSS, lalu load dulu Tailwind CDN. Jadi, nggak pakai custom CSS sama sekali
+Pada ./landing-page/index.html, pakai style yang gabung sama htmlnya. nggak jadi pakai tailwind. Hapus elemen-elemen yang sekiranya nggak perlu supaya kodenya nggak terlalu panjang
+Aku maunya inline style di tag HTMLnya, bukan pakai <style></style>
+Kasih ini di setiap tag HTML karena ini adalah defaultnya:
+margin: 0;
+        padding: 0;
+        font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif;
+        background: #fff;
+        color: #333;
+        line-height: 1.6;
